@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal - Feira de Ciências</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2.5rem;
+      border-radius: 16px;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #00f2fe;
+    }
+
+    p.subtitle {
+      font-size: 0.9rem;
+      color: #b3cdd1;
+      margin-bottom: 2rem;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .btn {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn-visitor {
+      background: #00f2fe;
+      color: #0f2027;
+    }
+
+    .btn-visitor:hover {
+      background: #4facfe;
+      transform: translateY(-2px);
+    }
+
+    .collaborator-box {
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 1.5rem;
+      margin-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    input[type="password"] {
+      padding: 0.8rem;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(0, 0, 0, 0.2);
+      color: #fff;
+      font-size: 1rem;
+      outline: none;
+      text-align: center;
+    }
+
+    input[type="password"]:focus {
+      border-color: #00f2fe;
+    }
+
+    .btn-collab {
+      background: transparent;
+      border: 1px solid #00f2fe;
+      color: #00f2fe;
+    }
+
+    .btn-collab:hover {
+      background: rgba(0, 242, 254, 0.1);
+    }
+
+    .message {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #ff6b6b;
+      min-height: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Feira de Ciências</h1>
+    <p class="subtitle">Selecione seu tipo de acesso para continuar</p>
+
+    <div class="options">
+      <button class="btn btn-visitor" onclick="acessarVisitante()">Entrar como Visitante</button>
+
+      <div class="collaborator-box">
+        <input type="password" id="passInput" placeholder="Senha do Colaborador">
+        <button class="btn btn-collab" onclick="validarColaborador()">Acesso Restrito</button>
+      </div>
+    </div>
+
+    <div id="msg" class="message"></div>
+  </div>
+
+  <script>
+    function acessarVisitante() {
+      window.location.href = "visitante.html";
+    }
+
+    function validarColaborador() {
+      const senhaInput = document.getElementById("passInput").value;
+      const msg = document.getElementById("msg");
+
+      if (senhaInput === "11029021") {
+        window.location.href = "colaborador.html";
+      } else {
+        msg.textContent = "Senha incorreta. Por favor, acesse o modo visitante.";
+      }
+    }
+  </script>
+
+</body>
+</html>

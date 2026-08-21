@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visitante - Feira de Ciências</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #0f2027;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #00f2fe;
+    }
+
+    header a {
+      color: #b3cdd1;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    header a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      width: 100%;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #b3cdd1;
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 1.8rem;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #00f2fe;
+    }
+
+    .card h3 {
+      color: #00f2fe;
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #a0aab0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      color: #6c7a89;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Feira de Ciências</h1>
+    <a href="index.html">Sair</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Bem-vindo à Exposição</h2>
+      <p>Explore nossos projetos científicos, experimentos interativos e descobertas apresentadas pelos alunos.</p>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h3>Estande 01</h3>
+        <p>Energias Renováveis e Sustentabilidade no Ambiente Urbano.</p>
+      </div>
+
+      <div class="card">
+        <h3>Estande 02</h3>
+        <p>Automação e Robótica Aplicada à Saúde Pública.</p>
+      </div>
+
+      <div class="card">
+        <h3>Estande 03</h3>
+        <p>Reações Químicas e Processos de Reciclagem Avançada.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Portal da Feira de Ciências - Acesso Público</p>
+  </footer>
+
+</body>
+</html>
