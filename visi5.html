@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motor Elétrico Simples - Visitante</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #0f2027;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 1.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      color: #00f2fe;
+    }
+
+    header button {
+      background: transparent;
+      color: #b3cdd1;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    header button:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      width: 100%;
+    }
+
+    .title-section {
+      margin-bottom: 2rem;
+    }
+
+    .title-section h2 {
+      font-size: 2.2rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .img-container {
+      width: 100%;
+      height: 350px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+
+    .img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content-box {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+
+    .content-box h3 {
+      color: #00f2fe;
+      margin-bottom: 1rem;
+    }
+
+    .content-box p {
+      color: #a0aab0;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      color: #6c7a89;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Feira de Ciências</h1>
+    <button onclick="history.back()">Voltar</button>
+  </header>
+
+  <main>
+    <div class="title-section">
+      <h2>Motor Elétrico Simples</h2>
+    </div>
+
+    <div class="img-container">
+      <img src="https://images.unsplash.com/photo-1622979135225-d2ba269bc1bd?auto=format&fit=crop&w=800&q=80" alt="Motor Elétrico Simples">
+    </div>
+
+    <div class="content-box">
+      <h3>Sobre a Apresentação</h3>
+      <p>Demonstração da Força de Lorentz usando uma pilha, ímã e fio de cobre.</p>
+      <p>A passagem de corrente elétrica pelo campo magnético faz o fio girar continuamente.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Modo Visitante - Feira de Ciências</p>
+  </footer>
+
+</body>
+</html>

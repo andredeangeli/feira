@@ -13,138 +13,117 @@
     }
 
     body {
-      background: #0b1319;
-      color: #e0e0e0;
+      background: #0f172a;
+      color: #f8fafc;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
     }
 
     header {
-      background: rgba(0, 242, 254, 0.03);
-      border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       padding: 1.5rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    .badge {
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-
-    .badge h1 {
-      font-size: 1.4rem;
-      color: #fff;
-    }
-
-    .tag {
-      background: #00f2fe;
-      color: #0b1319;
-      font-size: 0.75rem;
-      font-weight: bold;
-      padding: 0.2rem 0.6rem;
-      border-radius: 4px;
-      text-transform: uppercase;
+    header h1 {
+      font-size: 1.5rem;
+      color: #38bdf8;
     }
 
     header a {
-      color: #ff6b6b;
+      color: #94a3b8;
       text-decoration: none;
       font-size: 0.9rem;
-      border: 1px solid rgba(255, 107, 107, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.2);
       padding: 0.5rem 1rem;
       border-radius: 6px;
       transition: all 0.3s ease;
     }
 
     header a:hover {
-      background: rgba(255, 107, 107, 0.1);
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
     }
 
     main {
       flex: 1;
-      max-width: 1100px;
+      max-width: 1000px;
       margin: 0 auto;
-      padding: 2.5rem 1.5rem;
+      padding: 3rem 1.5rem;
       width: 100%;
     }
 
-    .dashboard-title {
-      margin-bottom: 2rem;
+    .hero {
+      text-align: center;
+      margin-bottom: 3rem;
     }
 
-    .dashboard-title h2 {
-      font-size: 2rem;
+    .hero h2 {
+      font-size: 2.2rem;
       color: #fff;
+      margin-bottom: 0.8rem;
     }
 
-    .dashboard-title p {
-      color: #7f8c8d;
-      font-size: 0.95rem;
+    .hero p {
+      font-size: 1rem;
+      color: #94a3b8;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    .panel-grid {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
 
-    .panel-card {
-      background: rgba(255, 255, 255, 0.02);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 10px;
-      padding: 1.5rem;
+    .card {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1.8rem;
+      cursor: pointer;
+      transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
-    .panel-card h3 {
-      font-size: 1.1rem;
-      color: #00f2fe;
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #38bdf8;
     }
 
-    .task-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.8rem;
+    .card h3 {
+      color: #38bdf8;
+      margin-bottom: 0.8rem;
+      font-size: 1.2rem;
     }
 
-    .task-item {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(0, 0, 0, 0.2);
-      padding: 0.8rem 1rem;
-      border-radius: 6px;
+    .card p {
       font-size: 0.9rem;
+      line-height: 1.5;
+      color: #cbd5e1;
     }
 
-    .status {
-      font-size: 0.75rem;
-      padding: 0.2rem 0.5rem;
+    .badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.1);
+      color: #38bdf8;
+      padding: 0.2rem 0.6rem;
       border-radius: 4px;
-    }
-
-    .status.pending {
-      background: rgba(241, 196, 15, 0.2);
-      color: #f1c40f;
-    }
-
-    .status.done {
-      background: rgba(46, 204, 113, 0.2);
-      color: #2ecc71;
+      font-size: 0.75rem;
+      margin-top: 1rem;
+      border: 1px solid rgba(56, 189, 248, 0.2);
     }
 
     footer {
       text-align: center;
       padding: 2rem;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
-      color: #505a60;
+      color: #64748b;
       font-size: 0.85rem;
     }
   </style>
@@ -152,54 +131,51 @@
 <body>
 
   <header>
-    <div class="badge">
-      <h1>Feira de Ciências</h1>
-      <span class="tag">Restrito</span>
-    </div>
-    <a href="index.html">Encerrar Sessão</a>
+    <h1>Área Técnica / Colaboradores</h1>
+    <a href="index.html">Sair</a>
   </header>
 
   <main>
-    <div class="dashboard-title">
-      <h2>Painel Interno de Controle</h2>
-      <p>Gerenciamento de apresentações, horários e suporte técnico.</p>
-    </div>
+    <section class="hero">
+      <h2>Guia de Preparação e Execução</h2>
+      <p>Acesse o protocolo técnico, lista de materiais e procedimentos de segurança de cada experimento.</p>
+    </section>
 
-    <div class="panel-grid">
-      <div class="panel-card">
-        <h3>Cronograma de Apresentações</h3>
-        <ul class="task-list">
-          <li class="task-item">
-            <span>09:00 - Abertura dos Estandes</span>
-            <span class="status done">Concluído</span>
-          </li>
-          <li class="task-item">
-            <span>11:00 - Avaliação dos Jurados</span>
-            <span class="status pending">Em Andamento</span>
-          </li>
-          <li class="task-item">
-            <span>14:30 - Demonstração Prática</span>
-            <span class="status pending">Pendente</span>
-          </li>
-        </ul>
+    <section class="grid">
+      <div class="card" onclick="location.href='cola1.html'">
+        <h3>01. Vulcão Químico</h3>
+        <p>Instruções de montagem da estrutura, proporções de bicarbonato/vinagre e descarte seguro.</p>
+        <span class="badge">Protocolo Técnico</span>
       </div>
 
-      <div class="panel-card">
-        <h3>Avisos Importantes</h3>
-        <ul class="task-list">
-          <li class="task-item">
-            <span>Reposicionamento de cabos no Estande 02</span>
-          </li>
-          <li class="task-item">
-            <span>Entrega das fichas de avaliação às 16:00</span>
-          </li>
-        </ul>
+      <div class="card" onclick="location.href='cola2.html'">
+        <h3>02. Lâmpada de Lava</h3>
+        <p>Proporções de reagentes, escolha de corantes e reabastecimento de comprimidos efervescentes.</p>
+        <span class="badge">Protocolo Técnico</span>
       </div>
-    </div>
+
+      <div class="card" onclick="location.href='cola3.html'">
+        <h3>03. Bobina de Tesla</h3>
+        <p>Esquema de circuito elétrico, especificação de transistores e medidas de segurança com alta tensão.</p>
+        <span class="badge">Protocolo Técnico</span>
+      </div>
+
+      <div class="card" onclick="location.href='cola4.html'">
+        <h3>04. Fluido Não-Newtoniano</h3>
+        <p>Proporção ideal de amido de milho e água, técnicas de manutenção de umidade durante o evento.</p>
+        <span class="badge">Protocolo Técnico</span>
+      </div>
+
+      <div class="card" onclick="location.href='cola5.html'">
+        <h3>05. Motor Elétrico Simples</h3>
+        <p>Gabarito de enrolamento de bobina, raspagem do esmalte e calibração de contato elétrico.</p>
+        <span class="badge">Protocolo Técnico</span>
+      </div>
+    </section>
   </main>
 
   <footer>
-    <p>Área Administrativa do Colaborador</p>
+    <p>Painel de Controle Interno - Feira de Ciências</p>
   </footer>
 
 </body>

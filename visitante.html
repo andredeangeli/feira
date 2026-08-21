@@ -88,6 +88,7 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 12px;
       padding: 1.8rem;
+      cursor: pointer;
       transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
@@ -127,23 +128,33 @@
   <main>
     <section class="hero">
       <h2>Bem-vindo à Exposição</h2>
-      <p>Explore nossos projetos científicos, experimentos interativos e descobertas apresentadas pelos alunos.</p>
+      <p>Clique em um dos experimentos para visualizar mais informações.</p>
     </section>
 
     <section class="grid">
-      <div class="card">
-        <h3>Estande 01</h3>
-        <p>Energias Renováveis e Sustentabilidade no Ambiente Urbano.</p>
+      <div class="card" onclick="location.href='visi1.html'">
+        <h3>01. Vulcão Químico</h3>
+        <p>Reação efervescente simulando uma erupção com produtos caseiros.</p>
       </div>
 
-      <div class="card">
-        <h3>Estande 02</h3>
-        <p>Automação e Robótica Aplicada à Saúde Pública.</p>
+      <div class="card" onclick="location.href='visi2.html'">
+        <h3>02. Lâmpada de Lava</h3>
+        <p>Efeito visual incrível demonstrando a densidade entre água e óleo.</p>
       </div>
 
-      <div class="card">
-        <h3>Estande 03</h3>
-        <p>Reações Químicas e Processos de Reciclagem Avançada.</p>
+      <div class="card" onclick="location.href='visi3.html'">
+        <h3>03. Bobina de Tesla</h3>
+        <p>Geração de energia sem fio acendendo lâmpadas à distância.</p>
+      </div>
+
+      <div class="card" onclick="location.href='visi4.html'">
+        <h3>04. Fluido Não-Newtoniano</h3>
+        <p>Uma mistura mágica que fica sólida ao receber impacto.</p>
+      </div>
+
+      <div class="card" onclick="location.href='visi5.html'">
+        <h3>05. Motor Elétrico Simples</h3>
+        <p>Funcionamento básico do eletromagnetismo em movimento.</p>
       </div>
     </section>
   </main>
